@@ -1,3 +1,4 @@
+import type { Movie } from "../types";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useMovieContext } from "../contexts/MovieContext";
@@ -35,7 +36,7 @@ export default function Favorites() {
           <p className={FavoritesStyles.subheading}>A collection of movies you’ve marked as favorites.</p>
         </div>
         <div className={FavoritesStyles.movieGrid}>
-          {favorites.map((movieData) => (
+          {favorites.map((movieData: Movie) => (
             <motion.div key={movieData.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}>
               <MovieCard movie={movieData} showFavoriteButton />
             </motion.div>
