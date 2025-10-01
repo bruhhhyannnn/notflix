@@ -1,8 +1,9 @@
 import FavoriteButton from "./FavoriteButton";
 import { MovieCardStyles } from "../css";
+import type { Movie } from "../types";
 
 type MovieCardProps = {
-  movie: any;
+  movie: Movie;
   showFavoriteButton?: boolean;
 };
 
