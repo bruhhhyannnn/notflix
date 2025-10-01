@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heading,
+.subheading {
+  width: 100%;
+  text-align: center;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.inputContainer {
+  background-color: var(--neutral-color-200);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  outline: none;
+  width: 290px;
+  border: none;
+  padding: 0 16px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.searchButton {
+  height: 36px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--accent-color-blue-600);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.searchButton:hover {
+  background-color: var(--accent-color-blue-700);
+  transform: scale(1.05);
+}
+
+.searchButton:active {
+  background-color: var(--accent-color-blue-800);
+  transform: scale(0.95);
+}
+
+.movieContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.movieWrapper {
+}
+
+.movieGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .movieGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 810px) {
+  .movieGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.loading,
+.errorMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}

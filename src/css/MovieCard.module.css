@@ -1,0 +1,45 @@
+.movieCard {
+  border-radius: 8px;
+  background-color: var(--neutral-color-200);
+  position: relative;
+}
+
+.movieCard:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  .favoriteButton {
+    visibility: visible;
+  }
+}
+
+.moviePoster {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.movieOverlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 14px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.releaseDate {
+  font-weight: 500;
+  font-size: 0.9rem;
+}

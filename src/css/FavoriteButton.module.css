@@ -1,0 +1,57 @@
+.favoriteButton {
+  font-size: 28px;
+  padding: 0 6px;
+  background-color: var(--neutral-color-300);
+  color: var(--neutral-color-950);
+  border-radius: 100px;
+  border: none;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.favoriteButton:hover {
+  background-color: var(--accent-color-red-400);
+  transform: scale(1.05);
+}
+
+.favoriteButton:active {
+  color: var(--accent-color-red-400);
+  background-color: var(--accent-color-red-500);
+  transform: scale(0.95);
+}
+
+.addedFavoriteOverlay {
+  width: 200px;
+  position: absolute;
+  top: -66px;
+  left: -86px;
+  right: 0;
+  background-color: var(--accent-color-red-400);
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.addedFavoriteOverlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.favoriteText {
+  font-size: 34px;
+  color: var(--accent-color-red-500);
+}
+
+.active {
+  color: var(--accent-color-red-500);
+  background-color: var(--neutral-color-200);
+}
+
+.alwaysVisible {
+  visibility: visible;
+}

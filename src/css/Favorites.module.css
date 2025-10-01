@@ -1,0 +1,46 @@
+.movieContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heading,
+.subheading {
+  width: 100%;
+  text-align: center;
+}
+
+.favoriteColor {
+  color: var(--accent-color-red-400);
+}
+
+.link {
+  color: var(--accent-color-blue-600);
+}
+
+.movieGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1200px) {
+  .movieGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 810px) {
+  .movieGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

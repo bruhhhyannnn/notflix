@@ -1,0 +1,16 @@
+.link {
+  background-color: var(--accent-color-blue-600);
+  height: 36px;
+  border-radius: 100px;
+  padding: 6px;
+}
+
+.link:hover {
+  background-color: var(--accent-color-blue-700);
+  transform: scale(1.05);
+}
+
+.link:active {
+  background-color: var(--accent-color-blue-800);
+  transform: scale(0.95);
+}
