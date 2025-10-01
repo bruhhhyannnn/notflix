@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { MovieCard } from "../components/";
 import { Section } from "../components/ui";
 import { HomeStyles } from "../css";
-import { getPopularMovies, searchMovies } from "../services/api.js";
+import { getPopularMovies, searchMovies } from "../services/api.ts";
 import { motion } from "framer-motion";
 import { MagnifyingGlass } from "@phosphor-icons/react";
+import type { Movie } from "../types";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -29,7 +30,7 @@ export default function Home() {
     loadPopularMovies();
   }, []);
 
-  const handleSearch = async (e) => {
+  const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!searchQuery.trim()) return;
     if (loading) return;
@@ -92,7 +93,7 @@ export default function Home() {
               </div>
             ) : (
               <div className={HomeStyles.movieGrid}>
-                {movies.map((movieData) => (
+                {movies.map((movieData: Movie) => (
                   <motion.div key={movieData.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}>
                     <MovieCard movie={movieData} />
                   </motion.div>
