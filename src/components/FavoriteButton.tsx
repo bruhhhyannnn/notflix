@@ -1,9 +1,11 @@
+import type { ButtonHTMLAttributes } from "react";
+import type { Movie } from "../types";
 import { useState } from "react";
 import { useMovieContext } from "../contexts/MovieContext";
 import { FavoriteButtonStyles } from "../css";
 
 type FavoriteButtonProps = {
-  movie: any;
+  movie: Movie;
   alwaysVisible?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -14,7 +16,7 @@ export default function FavoriteButton({ movie, alwaysVisible = false, className
 
   const favorite = isFavorite(movie.id);
 
-  function onFavoriteClick(e) {
+  function onFavoriteClick(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     setShowOverlay(true);
 
