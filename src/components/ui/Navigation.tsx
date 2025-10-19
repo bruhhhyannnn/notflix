@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
 import { List, X } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavigationStyles } from "../../css";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (menuOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
