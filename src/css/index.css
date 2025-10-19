@@ -27,9 +27,9 @@
   --accent-color-red-500: #fb2c36;
 
   --max-width-navigation-footer-content: 1200px;
-  --max-width-desktop: 1100px;
-  --max-width-tablet: 700px;
-  --max-width-mobile: 400px;
+  --max-width-desktop-content: 1100px;
+  --max-width-tablet-content: 700px;
+  --max-width-mobile-content: 400px;
 
   color-scheme: light dark;
   font-synthesis: none;
