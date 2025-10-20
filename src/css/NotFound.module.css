@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.headingContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.link {
+  color: var(--accent-color-blue-600);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
