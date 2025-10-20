@@ -12,6 +12,14 @@
   }
 }
 
+.movieCard:active {
+  transform: scale(0.98);
+  z-index: 1;
+  .favoriteButton {
+    visibility: hidden;
+  }
+}
+
 .moviePoster {
   position: relative;
 }
