@@ -1,8 +1,8 @@
+export { default as HomeStyles } from "./Home.module.css";
+export { default as FavoritesStyles } from "./Favorites.module.css";
+export { default as NavigationStyles } from "./Navigation.module.css";
+export { default as FooterStyles } from "./Footer.module.css";
+export { default as SectionStyles } from "./Section.module.css";
 export { default as ButtonSocialStyles } from "./ButtonSocial.module.css";
 export { default as FavoriteButtonStyles } from "./FavoriteButton.module.css";
-export { default as FavoritesStyles } from "./Favorites.module.css";
-export { default as FooterStyles } from "./Footer.module.css";
-export { default as HomeStyles } from "./Home.module.css";
 export { default as MovieCardStyles } from "./MovieCard.module.css";
-export { default as NavigationStyles } from "./Navigation.module.css";
-export { default as SectionStyles } from "./Section.module.css";
