@@ -25,6 +25,10 @@
   color: var(--accent-color-blue-600);
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
 .movieGrid {
   width: 100%;
   display: grid;
