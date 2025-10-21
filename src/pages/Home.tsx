@@ -6,6 +6,7 @@ import { getPopularMovies, searchMovies } from "../services/api.ts";
 import { motion } from "framer-motion";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import type { Movie } from "../types";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -95,7 +96,9 @@ export default function Home() {
               <div className={HomeStyles.movieGrid}>
                 {movies.map((movieData: Movie, index: number) => (
                   <motion.div key={movieData.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}>
-                    <MovieCard movie={movieData} />
+                    <Link to={`/movies/${movieData.id}`}>
+                      <MovieCard movie={movieData} />
+                    </Link>
                   </motion.div>
                 ))}
               </div>
