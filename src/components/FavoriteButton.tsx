@@ -17,6 +17,7 @@ export default function FavoriteButton({ movie, alwaysVisible = false, className
   const favorite = isFavorite(movie.id);
 
   function onFavoriteClick(e: React.MouseEvent<HTMLButtonElement>) {
+    e.stopPropagation();
     e.preventDefault();
     setShowOverlay(true);
 
