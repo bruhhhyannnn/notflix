@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { fetchMovie } from "../services/api.ts";
 import { useEffect, useState } from "react";
 import { MovieDetailsStyles } from "../css";
+import { FavoriteButton } from "../components";
 import type { Movie } from "../types.ts";
 
 export default function MovieDetails() {
@@ -40,14 +41,41 @@ export default function MovieDetails() {
 
   return (
     <Section>
-      <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`${movie.title}`} className={MovieDetailsStyles.backdropImage} />
-      <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title}`} className={MovieDetailsStyles.posterImage} />
-      <p className={MovieDetailsStyles.title}>{movie.title}</p>
-      <p>{movie.release_date}</p>
-      <p>{movie.popularity}</p>
-      <p>{movie.vote_average}</p>
-      <p>{movie.vote_count}</p>
-      <p className={MovieDetailsStyles.releaseDate}>{movie.overview}</p>
+      <div className={MovieDetailsStyles.content}>
+        <div className={MovieDetailsStyles.movieBackdrop}>
+          <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`${movie.title}`} className={MovieDetailsStyles.backdropImage} />
+          <div className={MovieDetailsStyles.favoriteButtonOverlay}>
+            <FavoriteButton movie={movie} className={MovieDetailsStyles.favoriteButton} alwaysVisible={true} />
+          </div>
+        </div>
+        <div className={MovieDetailsStyles.movieInfo}>
+          <div className={MovieDetailsStyles.moviePoster}>
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={`${movie.title}`} className={MovieDetailsStyles.posterImage} />
+          </div>
+          <div className={MovieDetailsStyles.movieInfoContent}>
+            <p className={MovieDetailsStyles.title}>{movie.title}</p>
+            <div className={MovieDetailsStyles.titleAndReleaseDateContainer}>
+              <p>Release Date: </p>
+              <p>{movie.release_date}</p>
+            </div>
+            <div className={MovieDetailsStyles.popularityContainer}>
+              <p>Popularity: </p>
+              <p>{movie.popularity}</p>
+            </div>
+            <div className={MovieDetailsStyles.voteCountContainer}>
+              <p>Vote Count: </p>
+              <p>{movie.vote_count}</p>
+            </div>
+            <div className={MovieDetailsStyles.voteAverageContainer}>
+              <p>Vote Average: </p>
+              <p>{movie.vote_average}</p>
+            </div>
+          </div>
+        </div>
+        <div className={MovieDetailsStyles.movieOverview}>
+          <p className={MovieDetailsStyles.releaseDate}>{movie.overview}</p>
+        </div>
+      </div>
     </Section>
   );
 }
