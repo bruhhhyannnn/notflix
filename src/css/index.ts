@@ -1,5 +1,6 @@
 export { default as HomeStyles } from "./Home.module.css";
 export { default as FavoritesStyles } from "./Favorites.module.css";
+export { default as MovieDetailsStyles } from "./MovieDetails.module.css";
 export { default as NotFoundStyles } from "./NotFound.module.css";
 export { default as NavigationStyles } from "./Navigation.module.css";
 export { default as FooterStyles } from "./Footer.module.css";
